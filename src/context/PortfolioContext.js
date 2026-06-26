@@ -1,46 +1,59 @@
 import React, { createContext, useContext, useReducer, useEffect, useCallback } from 'react';
 import axios from 'axios';
+ 
 
 // Fallback data for when API is unavailable
 const fallbackData = {
   portfolio: {
     name: "Mahak Dalwani",
     title: "Full Stack Developer",
-    email: "mahak.dalwani@example.com",
-    phone: "+1 (555) 123-4567",
-    location: "Your City, State",
+    email: "mahakdalwani1@gmail.com",
+    phone: "+91 7489955456",
+    location: "Pune, Maharashtra, India",
     about: "Passionate full stack developer with expertise in modern web technologies."
   },
   skills: [
-    // { _id: '1', name: 'HTML', category: 'Frontend', level: 'Expert', proficiency: 95 },
-    // { _id: '2', name: 'React', category: 'Frontend', level: 'Expert', proficiency: 95 },
-    // { _id: '3', name: 'Node.js', category: 'Backend', level: 'Advanced', proficiency: 90 },
-    // { _id: '4', name: 'MongoDB', category: 'Database', level: 'Advanced', proficiency: 85 },
-    // { _id: '5', name: 'JavaScript', category: 'Frontend', level: 'Expert', proficiency: 95 },
-    // { _id: '6', name: 'CSS3', category: 'Frontend', level: 'Advanced', proficiency: 88 }
+    { _id: '1', name: 'HTML', category: 'Frontend', level: 'Expert', proficiency: 95 },
+    { _id: '2', name: 'React', category: 'Frontend', level: 'Expert', proficiency: 95 },
+    { _id: '3', name: 'Node.js', category: 'Backend', level: 'Advanced', proficiency: 90 },
+    { _id: '4', name: 'MongoDB', category: 'Database', level: 'Advanced', proficiency: 85 },
+    { _id: '5', name: 'JavaScript', category: 'Frontend', level: 'Expert', proficiency: 95 },
+    { _id: '6', name: 'CSS3', category: 'Frontend', level: 'Advanced', proficiency: 88 }
   ],
   projects: [
-    // {
-    //   _id: '1',
-    //   title: "E-Commerce Platform",
-    //   description: "A full-featured e-commerce platform with payment integration",
-    //   technologies: ["React", "Node.js", "MongoDB"],
-    //   liveUrl: "https://example.com",
-    //   githubUrl: "https://github.com/example"
-    // }
+    {
+      _id: '1',
+      title: "SplitEase",
+      description: "A free online tool to split expenses fairly among friends or groups.",
+      technologies: ["React", "CSS3", "JavaScript"],
+      liveUrl: "https://splitease-beryl.vercel.app",
+      githubUrl: "https://github.com/MahakDalwani/splitease",
+      Portfolio: "https://github.com/MahakDalwani/",
+      featured: true,
+    },
+    {
+      _id: '2',
+      title: "Portfolio Website",
+      description: "A personal portfolio website to showcase my skills, projects, and experience.",
+      technologies: ["React", "Node.js", "CSS3", "MongoDB"],
+      liveUrl: "https://my-portfolio-t5wp.vercel.app/",
+      githubUrl: "https://github.com/MahakDalwani/my_portfolio",
+      Portfolio: "https://github.com/MahakDalwani/",
+      featured: true,
+    }
   ],
   experiences: [
     {
       _id: '1',
-      company: "TECH STARTUP INC.",
-      position: "Senior Full Stack Developer",
-      location: "San Francisco, CA",
-      startDate: "2021-01-01",
-      endDate: "2023-06-01",
-      current: false,
-      description: "Led development of multiple features and mentored junior developers. Improved application performance by 40%.",
+      company: "Freelance",
+      position: "Full Stack Developer",
+      location: "Pune, Maharashtra, India",
+      startDate: "2025-08-026",
+      endDate: "2026-06-30",
+      current: true,
+      description: "Developed and maintained web applications for various clients, utilizing React for frontend development and Node.js for backend services. Implemented RESTful APIs, integrated third-party services, and ensured responsive design across devices.",
       employmentType: "FULL-TIME",
-      skills: ["REACT", "NODE.JS", "MONGODB", "AWS"]
+      skills: ["Html, Css, JavaScript", "React", "Node.js", "MongoDB", "AWS"]
     }
   ]
 };

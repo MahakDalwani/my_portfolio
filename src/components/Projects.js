@@ -1,4 +1,5 @@
 import React, { useState, useContext, useMemo } from 'react';
+
 import EmptyState from './EmptyState';
 import '../styles/Projects.css';
 
@@ -54,6 +55,7 @@ const Projects = ({ projects, loading, error }) => {
   return (
     <section className="projects" id="projects">
       <div className="projects-container">
+        <section id="featureprojects"></section>
         <h2>Featured Projects</h2>
         {displayProjects.length === 0 ? (
           <EmptyState type="projects" />
@@ -61,13 +63,13 @@ const Projects = ({ projects, loading, error }) => {
           <div className="projects-grid">
             {displayProjects.map(project => (
               <div key={project._id} className="project-card">
-                <div className="project-image">
+                {/* <div className="project-image">
                   {project.image ? (
                     <img src={project.image} alt={project.title} />
                   ) : (
                     <div className="image-placeholder">No Image</div>
                   )}
-                </div>
+                </div> */}
                 <div className="project-content">
                   <h3>{project.title}</h3>
                   <p className="description">{project.description}</p>
@@ -79,16 +81,39 @@ const Projects = ({ projects, loading, error }) => {
                     ))}
                   </div>
                   <div className="project-links">
-                    {project.githubrepo && (
-                      <a href={project.githubrepo} target="_blank" rel="noopener noreferrer">
-                        GitHub
-                      </a>
-                    )}
-                    {project.liveLink && (
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">
-                        Live Demo
-                      </a>
-                    )}
+  {project.githubUrl && (
+    <a
+      href={project.githubUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-link"
+    >
+      GitHub
+    </a>
+  )}
+  {project.liveUrl && (
+    <a
+      href={project.liveUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-link"
+    >
+      Live Demo
+    </a>
+  )}
+  {project.Portfolio && (
+    <a
+      href={project.Portfolio}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="project-link"
+    >
+      Portfolio
+    </a>
+  )}
+
+
+
                   </div>
                 </div>
               </div>

@@ -18,10 +18,18 @@ const Hero = ({ portfolioData }) => {
           <h2 className="hero-title">Welcome to My Portfolio</h2>
           <h1>{heroContent.name}</h1>
           <p className="hero-description">{heroContent.bio}</p>
-          <div className="hero-buttons">
-            <button className="btn btn-primary">View My Work</button>
-            <button className="btn btn-secondary">Download Resume</button>
-          </div>
+
+         <div className="hero-buttons">
+  {/* Scroll to Featured Projects */}
+  <a href="#featureprojects" className="btn btn-primary">
+    View My Work
+  </a>
+
+  {/* Download Resume */}
+  <a href="/resume.pdf" className="btn btn-secondary" download>
+    Download Resume
+  </a>
+</div>
           <div className="social-links">
             {heroContent.socialLinks.github && (
               <a href={heroContent.socialLinks.github} target="_blank" rel="noopener noreferrer">
