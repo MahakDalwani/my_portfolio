@@ -26,7 +26,7 @@ const Hero = ({ portfolioData }) => {
   </a>
 
   {/* Download Resume */}
-  <a href="/resume.pdf" className="btn btn-secondary" download>
+  <a href="/Resume.pdf.pdf" className="btn btn-secondary" download>
     Download Resume
   </a>
 </div>
